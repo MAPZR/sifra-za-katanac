@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Digit from './components/Digit'
+import Snowflakes from './components/Snowflakes'
 
 class App extends Component {
     constructor(props) {
@@ -47,7 +48,7 @@ class App extends Component {
 
     isNewYear = () => {
         // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
-        const newYearDate = new Date(2023, 11, 26, 19, 58, 30);
+        const newYearDate = new Date(2023, 11, 26, 20, 27, 0);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
@@ -93,40 +94,8 @@ class App extends Component {
                     </div>
                 </div>
 
-                {/* Ovaj div sadrzi pahuljice i ima position absolute. Pozicioniran je preko elemenata glavnog kontejnera */}
-                <div className="snowflakes" aria-hidden="true" >
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                    <div className={this.state.animationStyle}> ❆ </div>
-                    <div className={this.state.animationStyle}> ❅ </div>
-                </div>
+                {/* Ovaj div sadrzi pahuljice i ima position absolute. Pozicioniran je preko svih elemenata glavnog kontejnera i ne utice na njihov raspored */}
+                <Snowflakes animationStyle={this.state.animationStyle}></Snowflakes>
             </div>
         )
     }
