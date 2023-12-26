@@ -38,7 +38,6 @@ class Snowflakes extends Component {
                 <div className={this.props.animationStyle}> ❅ </div>
                 <div className={this.props.animationStyle}> ❆ </div>
 
-
                 <div className={this.props.animationStyle}> ❅ </div>
                 <div className={this.props.animationStyle}> ❆ </div>
                 <div className={this.props.animationStyle}> ❅ </div>
