@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 
 class Digit extends Component {
-    state = {
+    constructor(props) {
+        super(props);
 
-    };
+        this.state = {
+           // digit: '0',
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        // this.setState({ digit: this.props.digit });
+    }
 
     render() {
         return (
-            <div className="Digit-container">X</div>
+            <div className="Digit-container">{this.props.digit}</div>
         )
     }
 }
