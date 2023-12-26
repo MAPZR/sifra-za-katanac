@@ -20,19 +20,46 @@ class App extends Component {
     }
 
     updateDigits = () => {
-        let num1 = this.getRandomNumberFromZeroToNine();
-        let num2 = this.getRandomNumberFromZeroToNine();
-        let num3 = this.getRandomNumberFromZeroToNine();
-        let num4 = this.getRandomNumberFromZeroToNine();
+        let isNewYear = this.isNewYear();
 
-        console.log(num1, num2, num3, num4);
-        this.setState({number1: num1, number2: num2, number3: num3, number4: num4});
+        if (isNewYear) {
+            this.setState({ number1: 5, number2: 2, number3: 7, number4: 3 });
+        } else {
+            let num1 = this.getRandomNumberFromZeroToNine();
+            let num2 = this.getRandomNumberFromZeroToNine();
+            let num3 = this.getRandomNumberFromZeroToNine();
+            let num4 = this.getRandomNumberFromZeroToNine();
+            console.log(num1, num2, num3, num4);
+            this.setState({ number1: num1, number2: num2, number3: num3, number4: num4 });
+        }
+    }
+
+    isNewYear = () => {
+        // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
+        const newYearDate = new Date(2023, 11, 26, 19, 14, 1);
+        const currentDate = new Date();
+
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        const day = currentDate.getDate();
+
+        const hours = currentDate.getHours();
+        const minutes = currentDate.getMinutes();
+        const secounds = currentDate.getSeconds();
+
+        console.log(year, month, day, hours, minutes, secounds);
+
+        if (currentDate.getTime() > newYearDate.getTime()) {
+            return true;
+        } else {
+            return false;
+        } 
     }
 
     getRandomNumberFromZeroToNine = () => {
         return Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
     }
-    
+
     render() {
         return (
             <div className="App-container">
