@@ -24,7 +24,7 @@ class App extends Component {
         let isNewYear = this.isNewYear();
 
         if (isNewYear) {
-            this.setState({ number1: 5, number2: 2, number3: 7, number4: 3 });
+            this.setState({ number1: 5, number2: 2, number3: 7, number4: 3, animationStyle: "snowflake", });
         } else {
             let num1 = this.getRandomNumberFromZeroToNine();
             let num2 = this.getRandomNumberFromZeroToNine();
@@ -51,9 +51,6 @@ class App extends Component {
         console.log(year, month, day, hours, minutes, secounds);
 
         if (currentDate.getTime() > newYearDate.getTime()) {
-            this.setState({
-                animationStyle: "snowflake",
-            })
             return true;
         } else {
             return false;
