@@ -7,3 +7,9 @@
     border-width: 5px;
     border-style: solid;
 }
+
+@media (max-width: 750px) {
+    .Digit-container {
+        font-size: 8rem;
+    }
+}

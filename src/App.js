@@ -48,7 +48,8 @@ class App extends Component {
 
     isNewYear = () => {
         // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
-        const newYearDate = new Date(2023, 11, 26, 20, 27, 0);
+        // const newYearDate = new Date(2023, 11, 26, 22, 16, 10);
+        const newYearDate = new Date(2023, 11, 27, 0, 0, 1);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
@@ -77,14 +78,14 @@ class App extends Component {
             <div className="App-container">
                 <div className="App-central-square">
                     <div className="App-text-area">
-                        <div className="App-headline">Poklon za Igora</div>
+                        <h1 className="App-headline">Poklon za Igora</h1>
                         <div>31.12.2023. tačno u ponoć prikazaće se šifra</div>
                         <div>Tada će Igor moći da otvori svoj poklon</div>
 
                     </div>
 
                     <div className="App-padlock">
-                        <div className="App-headline">Šifra za katanac:</div>
+                        <h1 className="App-headline">Šifra za katanac:</h1>
                         <div className="App-padlock-code">
                             <Digit digit={this.state.digit1}></Digit>
                             <Digit digit={this.state.digit2}></Digit>

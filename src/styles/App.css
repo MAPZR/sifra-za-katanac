@@ -81,3 +81,23 @@ html {
     /* min-height: 50%; */
     /* min-width: 90%; */
 }
+
+@media (max-width: 750px) {
+    .App-central-square {
+        justify-content: space-around;
+    }
+
+    .App-headline {
+        font-size: 2rem;
+    }
+
+    .App-text-area {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .App-text-area {
+        font-size: 1rem;
+    }
+}
