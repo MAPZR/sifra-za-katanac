@@ -1,0 +1,9 @@
+.Digit-container {
+    background-color: aqua;
+    font-size: 10rem;
+    font-weight: bold;
+    border-radius: 15%;
+    border-color: black;
+    border-width: 5px;
+    border-style:solid;
+}
