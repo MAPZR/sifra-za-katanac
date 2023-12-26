@@ -14,6 +14,7 @@ class App extends Component {
             number2: 7,
             number3: 8,
             number4: 9,
+            animationStyle: "noSnow", 
         };
 
         setInterval(this.updateDigits, 1000);
@@ -36,7 +37,7 @@ class App extends Component {
 
     isNewYear = () => {
         // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
-        const newYearDate = new Date(2023, 11, 26, 19, 14, 1);
+        const newYearDate = new Date(2023, 11, 26, 19, 43, 0);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
@@ -50,6 +51,9 @@ class App extends Component {
         console.log(year, month, day, hours, minutes, secounds);
 
         if (currentDate.getTime() > newYearDate.getTime()) {
+            this.setState({
+                animationStyle: "snowflake",
+            })
             return true;
         } else {
             return false;
@@ -80,6 +84,41 @@ class App extends Component {
                             <Digit digit={this.state.number4}></Digit>
                         </div>
                     </div>
+                </div>
+
+                {/* Ovaj div sadrzi pahuljice i ima position absolute. Pozicioniran je preko elemenata glavnog kontejnera */}
+                <div className="snowflakes" aria-hidden="true" >
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
+                    <div className={this.state.animationStyle}> ❆ </div>
+                    <div className={this.state.animationStyle}> ❅ </div>
                 </div>
             </div>
         )

@@ -4,6 +4,7 @@ import App from './App';
 import './styles/index.css';
 import './styles/App.css';
 import './styles/styleDigit.css';
+import './styles/styleSnowflakes.css';
 
 ReactDOM.render(
     <React.StrictMode>
