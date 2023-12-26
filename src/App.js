@@ -5,16 +5,26 @@ class App extends Component {
     constructor(props) {
         super(props);
 
+        let number1 = 6;
+        let number2 = 7;
+        let number3 = 8;
+        let number4 = 9;
+        let animStyle= "noSnow";
+
+        if (this.isNewYear()) {
+            number1 = 5;
+            number2 = 2;
+            number3 = 7;
+            number4 = 3;
+            animStyle = "snowflake";
+        }
+
         this.state = {
-            digit1: '6',
-            digit2: '7',
-            digit3: '8',
-            digit4: '9',
-            number1: 6,
-            number2: 7,
-            number3: 8,
-            number4: 9,
-            animationStyle: "noSnow", 
+            digit1: number1,
+            digit2: number2,
+            digit3: number3,
+            digit4: number4,
+            animationStyle: animStyle, 
         };
 
         setInterval(this.updateDigits, 1000);
@@ -24,20 +34,20 @@ class App extends Component {
         let isNewYear = this.isNewYear();
 
         if (isNewYear) {
-            this.setState({ number1: 5, number2: 2, number3: 7, number4: 3, animationStyle: "snowflake", });
+            this.setState({ digit1: 5, digit2: 2, digit3: 7, digit4: 3, animationStyle: "snowflake", });
         } else {
             let num1 = this.getRandomNumberFromZeroToNine();
             let num2 = this.getRandomNumberFromZeroToNine();
             let num3 = this.getRandomNumberFromZeroToNine();
             let num4 = this.getRandomNumberFromZeroToNine();
             console.log(num1, num2, num3, num4);
-            this.setState({ number1: num1, number2: num2, number3: num3, number4: num4 });
+            this.setState({ digit1: num1, digit2: num2, digit3: num3, digit4: num4 });
         }
     }
 
     isNewYear = () => {
         // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
-        const newYearDate = new Date(2023, 11, 26, 19, 43, 0);
+        const newYearDate = new Date(2023, 11, 26, 19, 58, 30);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
@@ -75,10 +85,10 @@ class App extends Component {
                     <div className="App-padlock">
                         <div className="App-headline">Šifra za katanac:</div>
                         <div className="App-padlock-code">
-                            <Digit digit={this.state.number1}></Digit>
-                            <Digit digit={this.state.number2}></Digit>
-                            <Digit digit={this.state.number3}></Digit>
-                            <Digit digit={this.state.number4}></Digit>
+                            <Digit digit={this.state.digit1}></Digit>
+                            <Digit digit={this.state.digit2}></Digit>
+                            <Digit digit={this.state.digit3}></Digit>
+                            <Digit digit={this.state.digit4}></Digit>
                         </div>
                     </div>
                 </div>
