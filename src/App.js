@@ -47,9 +47,9 @@ class App extends Component {
     }
 
     isNewYear = () => {
-        // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
+        const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
         // const newYearDate = new Date(2023, 11, 26, 22, 16, 10);
-        const newYearDate = new Date(2023, 11, 27, 0, 0, 1);
+        // const newYearDate = new Date(2023, 11, 27, 0, 0, 1);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
