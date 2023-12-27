@@ -41,7 +41,6 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 50vh;
     min-width: 30vw;
     padding: 1%;
     background-color: #8bba33;
