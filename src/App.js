@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Digit from './components/Digit'
 import Snowflakes from './components/Snowflakes'
+import santaclause from './videos/santaclause.gif'
 
 class App extends Component {
     constructor(props) {
@@ -76,6 +77,8 @@ class App extends Component {
     render() {
         return (
             <div className="App-container">
+                <img src={santaclause} alt="Santa Clause"/>
+                
                 <div className="App-central-square">
                     <div className="App-text-area">
                         <h1 className="App-headline">Poklon za Igora</h1>
