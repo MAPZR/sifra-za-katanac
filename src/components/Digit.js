@@ -5,12 +5,8 @@ class Digit extends Component {
         super(props);
 
         this.state = {
-           // digit: '0',
+           
         }
-    }
-
-    componentWillReceiveProps(nextProps) {
-        // this.setState({ digit: this.props.digit });
     }
 
     render() {

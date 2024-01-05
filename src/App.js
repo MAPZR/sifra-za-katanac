@@ -4,6 +4,10 @@ import Snowflakes from './components/Snowflakes'
 import santaclause from './videos/santaclause.gif'
 
 class App extends Component {
+    /**
+     * Constructor - constructs an App object
+     * @param {*} props 
+     */
     constructor(props) {
         super(props);
 
@@ -32,6 +36,9 @@ class App extends Component {
         setInterval(this.updateDigits, 1000);
     }
 
+    /**
+     * Updates digits on the screen. It's usually called each secound.
+     */
     updateDigits = () => {
         let isNewYear = this.isNewYear();
 
@@ -47,10 +54,14 @@ class App extends Component {
         }
     }
 
+    /**
+     * Checks if New Year is started (01.01.2024.)
+     * @returns true if started, false if not started
+     */
     isNewYear = () => {
-        // const newYearDate = new Date(2024, 0, 1, 0, 0, 1);
+        const newYearDate = new Date(2024, 0, 5, 15, 10, 1);
         // const newYearDate = new Date(2023, 11, 26, 22, 16, 10);
-        const newYearDate = new Date(2023, 11, 29, 20, 0, 1);
+        // const newYearDate = new Date(2023, 11, 29, 20, 0, 1);
         const currentDate = new Date();
 
         const year = currentDate.getFullYear();
@@ -70,8 +81,12 @@ class App extends Component {
         } 
     }
 
+    /**
+     * Gets random number from 0 to 9
+     * @returns random number from 0 to 9
+     */
     getRandomNumberFromZeroToNine = () => {
-        return Math.floor(Math.random() * 10); // Returns a random integer from 0 to 9:
+        return Math.floor(Math.random() * 10);
     }
 
     render() {
